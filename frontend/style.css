@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    /*background: linear-gradient(135deg, #1a1a3d, #45147d);*/
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+    box-sizing: border-box;
+}
+.header{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.second-container{
+    height:95vh;
+
+}
+.left{
+    width: 20vw;
+}
+.right{
+    width: 80vw;
+    position: relative;
+}
+.home{
+    height: 15vh;
+    border-radius: 15px;
+    padding: 10px;
+}
+.home ul li{
+    padding-top: 12px;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.library{
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.library-head{
+    display: flex;
+    gap: 10px;
+}
+.music-cards{
+    display: flex;
+    max-height: 80vh;
+    overflow-y: scroll;
+    gap: 15px;
+    object-fit: contain;
+    flex-wrap: wrap;
+}
+.card{
+    height: 25vh;
+    margin: 15px;
+    position: relative;
+}
+.card img{
+    border-radius: 15px;
+    padding:10px;
+    width: 12vw;
+}
+.option{
+    padding: 10px;
+    align-items: center;
+}
+.play-button {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    background-color: red; /* Green color */
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+.card:hover .play-button{
+    opacity: 1;
+}
+.play-button .triangle {
+    width: 0;
+    height: 0;
+    border-left: 12px solid black; /* Play icon color */
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.play-button:focus {
+    outline: none;
+}
+
+.play-button:hover {
+    background-color: red; /* Lighter green on hover */
+}
+/* Style for the entire scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Width for vertical scrollbars */
+    height: 8px; /* Height for horizontal scrollbars */
+}
+
+/* Background of the scrollbar */
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Dark background for the track */
+    border-radius: 4px;
+}
+
+/* Scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+    background: #444; /* Gray thumb for contrast */
+    border-radius: 4px;
+}
+
+/* Hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #666; /* Lighter gray on hover */
+}
+
+/* Scrollbar corner for two-direction scrolling containers */
+::-webkit-scrollbar-corner {
+    background: #1a1a1a; /* Match the track background */
+}
+ .login-button {
+     margin:10px 10px 0px 0px;
+     background: red; /* Gradient for dark look */
+     color: #fff; /* White text for contrast */
+     border: 1px solid #444; /* Subtle border */
+     border-radius: 25px; /* Rounded edges */
+     padding: 10px 20px; /* Size adjustments */
+     font-size: 16px; /* Readable text */
+     font-weight: bold; /* Emphasize the button text */
+     letter-spacing: 1px; /* Add some spacing */
+     cursor: pointer;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 -2px 4px rgba(255, 255, 255, 0.1) inset; /* Outer and inner shadows */
+     transition: all 0.3s ease; /* Smooth transition for hover effect */
+ }
+
+/* Hover state */
+.login-button:hover {
+    background: red; /* Slightly lighter on hover */
+    border-color: #ffffff; /* Highlight border on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4), 0 -2px 4px rgba(255, 255, 255, 0.2) inset; /* Enhance shadow */
+}
+.player{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: absolute;
+    width: 100%;
+    height: 6vh;
+    bottom: 0px;
+    background: #1a1a1a;
+    padding:10px 35px;
+
+}
+.control-bar {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    color: #888; /* Default icon color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: color 0.3s, background 0.3s;
+}
+
+.control-button:hover {
+    color: #fff; /* Brighten icon on hover */
+    background: #444; /* Slightly darker hover effect */
+}
+
+.control-button:active {
+    transform: scale(0.95); /* Press effect */
+}
+
+.control-button svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* Uses the button's text color */
+}
+
+.control-button:disabled {
+    cursor: not-allowed;
+    color: #555; /* Muted color for disabled state */
+}

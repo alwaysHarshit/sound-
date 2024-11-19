@@ -1,0 +1,16 @@
+.border{
+    border: solid 1px whitesmoke;
+}
+.margin{
+    margin: 10px;
+}
+.flex{
+    display: flex;
+}
+.bg-black{
+    background-color: #000000;
+    color: white;
+}
+.bg-gray{
+    background-color: #1a1a1a;
+}
